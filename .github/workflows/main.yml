@@ -1,0 +1,13 @@
+name: timer
+on:
+  schedule:
+    - cron:  '0 1,12 * * *'
+    
+jobs:
+    update_notion:
+        name: get
+        runs-on: ubuntu-18.04
+        steps:
+        - name: print
+          run: echo "$PATH"
+    
