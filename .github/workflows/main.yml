@@ -1,7 +1,10 @@
 name: timer
+# on:
+#   schedule:
+#     - cron:  '0 1,12 * * *'
 on:
-  schedule:
-    - cron:  '0 1,12 * * *'
+  watch:
+    types: [started]
     
 jobs:
     update_notion:
