@@ -1,10 +1,5 @@
 name: timer
-# on:
-#   schedule:
-#     - cron:  '0 1,12 * * *'
-on:
-  watch:
-    types: [started]
+on: workflow_dispatch
     
 jobs:
     update_notion:
