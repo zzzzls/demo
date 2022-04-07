@@ -1,6 +1,13 @@
 name: Greeting from Mona
 
-on: workflow_dispatch
+on: workflow_dispatch:
+  inputs:
+    loglevel:
+      description: 'Log Level'
+      require: true
+      default: 'warning'
+    tags:
+      description: 'Test'
 
 jobs:
   my-job:
@@ -11,4 +18,6 @@ jobs:
         run: |
           echo "====start===="
           echo ${{ secrets.ACCESS_TOKEN }}
+          echo ${{ github.event.inputs.loglevel }}
+          echo ${{ github.event.inputs.tags }}
           echo "==== stop ==="
