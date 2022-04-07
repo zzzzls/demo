@@ -1,13 +1,14 @@
 name: Greeting from Mona
 
-on: workflow_dispatch:
-  inputs:
-    loglevel:
-      description: 'Log Level'
-      require: true
-      default: 'warning'
-    tags:
-      description: 'Test'
+on: 
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test'
 
 jobs:
   my-job:
