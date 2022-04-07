@@ -10,5 +10,5 @@ jobs:
       - name: Print a greeting
         run: |
           echo "====start===="
-          echo ${{ secret.ACCESS_TOKEN }}
+          echo ${{ secrets.ACCESS_TOKEN }}
           echo "==== stop ==="
