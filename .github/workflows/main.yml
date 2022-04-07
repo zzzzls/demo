@@ -1,11 +1,17 @@
-name: timer
+name: Greeting from Mona
+
 on: workflow_dispatch
-    
+
 jobs:
-    update_notion:
-        name: get
-        runs-on: ubuntu-18.04
-        steps:
-        - name: print
-          run: echo "$PATH"
-    
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          MY_VAR: Hi there! My name is
+          FIRST_NAME: Mona
+          MIDDLE_NAME: The
+          LAST_NAME: Octocat
+        run: |
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
